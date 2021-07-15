@@ -1,38 +1,74 @@
 
-<ng-container matColumnDef="select">
-<mat-card class="Reveiw-card" >
+<ng-container  >
+    <div *ngFor="let dataItem of ReveiwList" class="card-cn">
+<mat-card class="Reveiw-card"  >
     <Div  >
     <mat-card-header >
         <mat-card-title> Name: </mat-card-title>
-        <mat-card-content> <label>jeff </label></mat-card-content>   
+        <mat-card-content> <label>{{dataItem.name}} </label></mat-card-content>   
     </mat-card-header>
     
     <hr>
 </Div>
 <div>
     <mat-card-title>Date: </mat-card-title>  
-        <mat-card-content><label>july 6, 2019 </label></mat-card-content>
+        <mat-card-content><label>{{dataItem.date}}  </label></mat-card-content>
     <div>
         <mat-card-title  >Source:</mat-card-title> 
-        <label>www.facebok.com</label> 
+        <label>Linkdin.com</label> 
     </div>
     <mat-card-title>Message:</mat-card-title>  
-    <label>Xpo is a taco</label>
+    <label>{{dataItem.message}}</label>
     
     <mat-card-title>Thumb:</mat-card-title> 
     <button mat-button>
-        <span class="material-icons">thumb_up</span> <label> Like To Save</label>
+        <span class="material-icons">{{dataItem.thumb}}</span> <label> Like To Save</label>
+        
     </button>
     <div>
         <mat-card-title>ID:</mat-card-title>   
-        <label>A12321</label>
+        <label>{{dataItem.id}}</label>
     </div>
 </div>
 </mat-card>
+</div>
 </ng-container>
 
 
-
+<ng-container  >
+    <div  class="card-cn">
+<mat-card class="Reveiw-card"  >
+    <Div  >
+    <mat-card-header >
+        <mat-card-title> Name: </mat-card-title>
+        <mat-card-content> <label>Bob</label></mat-card-content>   
+    </mat-card-header>
+    
+    <hr>
+</Div>
+<div>
+    <mat-card-title>Date: </mat-card-title>  
+        <mat-card-content><label>july 7, 2012 </label></mat-card-content>
+    <div>
+        <mat-card-title  >Source:</mat-card-title> 
+        <label>www.monster.com</label> 
+    </div>
+    <mat-card-title>Message:</mat-card-title>  
+    <label>Xpo sucks at taco</label>
+    
+    <mat-card-title>Thumb:</mat-card-title> 
+    <button mat-button>
+        <span class="material-icons">thumb_up </span> <label> Like To Save</label>
+        
+    </button>
+    <div>
+        <mat-card-title>ID:</mat-card-title>   
+        <label>A1253</label>
+    </div>
+</div>
+</mat-card>
+</div>
+</ng-container>
     
    
 

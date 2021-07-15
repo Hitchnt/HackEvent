@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from 'src/app/shared.service';
 
 @Component({
   selector: 'app-reveiw-card',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReveiwCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) { }
+
+  ReveiwList:any=[];
 
   ngOnInit(): void {
+    this.GetReveiwList(); // call to get the data
   }
 
+  GetReveiwList(){
+    this.service.getReveiwList().subscribe(data=>{
+      this.ReveiwList=data;
+    });
+  }
 }

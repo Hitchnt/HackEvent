@@ -7,7 +7,10 @@ import { ReveiwCardComponent } from './reveiw-card/reveiw-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatTable } from '@angular/material';
+import{SharedService} from './shared.service';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +21,11 @@ import { MatTable } from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    HttpClientModule,
+    FormsModule,
   ],
   
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
